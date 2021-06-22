@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+:root {
+  --background_color: #ECECEC;
+
+  --header_color: #FF7171;
+  --active_page_color: #FFAA71;
+
+  --button_color: #FF7171;
+  --hover_color: #FFAA71;
+  --disabled_color: #6E6D6D;
+  --border_color: #6E6D6D;
+  --background_dark_color: #6E6D6D;
+
+  --text_color: #ECECEC;
+  --error_color: #FF7171;
+}
+
+/* ***** GENERAL ELEMENTS ***** */
+html {
+  overflow-y: auto;
+  font-family: 'Nunito';
+  background: url('../img/background.png') no-repeat center center fixed;
+}
+
+body {
+  /* Allow the header to fill all the page */
+  margin: 0;
+}
+
+hr {
+  margin: 2em auto;
+  border-radius: 1px;
+  border: 1px solid var(--border_color);
+}
+
+.form-hr {
+  margin: 0.5em auto;
+  width: 100%;
+  border: 1px solid var(--active_page_color);
+}
+
+#snackbar {
+  visibility: hidden;
+  animation-fill-mode: forwards;
+  
+  position: fixed;
+  z-index: 2;
+
+  max-width: 90%;
+  margin-left: 5%;
+  bottom: 1em;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 1em; 
+  color: #fff;
+
+
+  border-radius: 1em;
+  background-color: var(--border_color);
+}
+
+#snackbar.show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+/* ***** HEADER ***** */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  background-color: var(--header_color);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  /* Sets the color of any text inside (logo-name) */
+  color: var(--text_color);
+}
+
+.logo-img {
+  margin-left: 5%;
+  height: 2em;
+  width: 2em;
+}
+
+.logo-name {
+  margin: 0 auto;
+  font-size: 1em;
+}
+
+nav {
+  margin-top: -3px;
+  white-space: nowrap;
+}
+
+nav a {
+  padding: 0.6em 1em;
+  font-size: 0.75em;
+  text-decoration: none;
+  color: var(--text_color);
+}
+
+nav a:hover, nav a:focus{
+  color: var(--background_dark_color);
+  background-color: var(--text_color);
+}
+
+nav #active-navoption {
+  background-color: var(--active_page_color);
+  
+  /* Avoid mixing hover and active at the same time */
+  color: var(--text_color);
+}
+
+/* ***** MAIN CONTENT ***** */
+main {
+  text-align: center;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+#search-div {
+  margin: 2.5em auto 0;
+}
+
+#search-bar {
+  position: relative;
+  padding: 0.6em;
+  font-size: 1em;
+  color: black;
+  border: 1px solid var(--border_color);
+  border-radius: 0.2em;
+  background-color: var(--background_color);
+}
+
+#unknown-poke {
+  text-align: center;
+  font-size: 1.em;
+  color: var(--error_color);
+}
+
+#search-button {
+  margin-left: 1%;
+  padding: 0.4em;
+  font-size: 1em;
+  font-family: 'Open Sans';
+  color: var(--text_color);
+  border: 1px solid transparent;
+  border-radius: 0.2em;
+  background-color: var(--button_color);
+}
+
+#search-button:hover, #search-button:focus {
+  cursor: pointer;
+  background-color: var(--hover_color);
+}
+
+#search-button:disabled {
+  cursor: default;
+  color: black;
+  background-color: var(--background_dark_color);
+}
+
+/* ***** FILTER SETTINGS ***** */
+.filters {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+#filter-collapsible {
+  cursor: pointer;
+  width: 100%;
+  padding: 0.5em;
+  text-align: left;
+  font-size: 1em;
+  font-family: 'Open Sans';
+  color: var(--text_color);
+  border: none;
+  border-radius: 0.2em;
+  background-color: var(--button_color);
+}
+
+#filter-collapsible:after {
+  content: '\02795'; /* sign (+) */
+  float: right;
+  font-size: 1em;
+  margin-left: 5px;
+}
+
+#filter-collapsible.active:after {
+  content: "\2796"; /* sign (-) */
+}
+
+.filter-settings {
+  /* Hide settings until the collapsible button is activated */
+  display: none;
+
+  margin: -0.5em auto;
+  justify-items: center;
+
+  font-size: 1.25em;
+  color: var(--text_color);
+
+  /* Responsive distribution of elements in columns */
+  grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+
+  background-color: var(--background_dark_color);
+}
+
+fieldset input {
+  margin: 0 auto;
+  padding: 0.6em;
+
+  color: var(--text_color);
+
+  border: 1px solid var(--text_color);
+  background: transparent;
+}
+
+legend {
+  transform: translate(0, 1.5em);
+  margin-bottom: 1.5em;
+  text-align: left;
+
+  font-size: 0.75em;
+  font-style: italic;
+  color: var(--text_color);
+}
+
+/* Specific style to each form */
+#type1, #type2 {
+  margin: 0 auto;
+  max-height: 20%;
+  max-width: 50%;
+  border: none;
+  border-bottom: 1px solid var(--text_color);
+}
+
+#unknown-type1, #unknown-type2 {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--error_color);
+}
+
+#min-range, #max-range, #generation {
+  max-width: 3.5em;
+  max-height: 0.4em;
+  border: 1px solid;
+}
+
+#generation {
+  max-width: 2em;
+}
+
+/* ***** POKEMON LIST ***** */
+#reload-grid {
+  margin: 1.5em auto 0.5em 0;
+  text-align: right;
+}
+
+#reload-grid input {
+  max-width: 1.5em;
+  max-height: 1.5em;
+}
+
+#reload-grid img:hover {
+  cursor: pointer;
+}
+
+.cards-grid {
+  display: grid;
+  margin: 0 auto;
+
+  /* Responsive distribution of elements in columns */
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(6.5em, 1fr));
+}
+
+.pokemon-card {
+  margin: auto;
+  height: 6.5em;
+  width: 6.5em;
+  transition: transform .2s;
+  border: 1px solid var(--border_color);
+}
+
+.pokemon-card img {
+  height: 100%;
+  width: 100%;
+}
+
+.pokemon-card:hover, .pokemon-card:focus {
+  transform: scale(1.15);
+  background-color: var(--hover_color);
+}
+
+.lds-dual-ring {
+  margin: 0 auto;
+  width: 4em;
+  height: 4em;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ***** FLOATING BUTTON ***** */
+.floating-button {
+  cursor: pointer;
+  position: fixed;
+  z-index: 1;
+	bottom: 1.5em;
+  right: 2.25em;
+  border-radius:40px;
+}
+
+.floating-button img {
+  height: 4em;
+  width: 4em;
+  border: 1px solid rgba(61, 61, 61, 0.507);
+  border-radius: 4em;
+}

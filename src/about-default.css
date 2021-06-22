@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+:root {
+  --background_color: #ECECEC;
+
+  --header_color: #FF7171;
+  --header_text_color: #ECECEC;
+  --active_page_color: #FFAA71;
+
+  --border_color: #6E6D6D;
+
+  --text_color: #ECECEC;
+}
+
+html {
+  overflow-y: auto;
+  font-family: 'Nunito';
+  background: url('../img/background.png') no-repeat center center fixed;
+ 
+}
+
+body {
+  /* Allow the header to fill all the page */
+  margin: 0;
+}
+
+/* ***** HEADER ***** */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  background-color: var(--header_color);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  /* Sets the color of any text inside (logo-name) */
+  color: var(--text_color);
+}
+
+.logo-img {
+  margin-left: 5%;
+  height: 4em;
+  width: 4em;
+}
+
+.logo-name {
+  margin: 0 auto;
+  font-size: 1.8em;
+}
+
+nav {
+  white-space: nowrap;
+}
+
+nav a {
+  padding: 1.3em 1em;
+  font-size: 1em;
+  text-decoration: none;
+  color: var(--text_color);
+}
+
+nav a:hover, nav a:focus{
+  color: var(--background_dark_color);
+  background-color: var(--text_color);
+}
+
+nav #active-navoption {
+  background-color: var(--active_page_color);
+  
+  /* Avoid mixing hover and active at the same time */
+  color: var(--text_color);
+}
+
+/* ***** MAIN CONTENT ***** */
+main {
+  text-align: center;
+}
+
+#by {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+#by h1 {
+  font-size: 8vw;
+  color: var(--header_color)
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 6vw;
+  font-weight: bold;
+  color: var(--text_color);
+}
+
+h2 {
+  font-size: 4vw;
+  font-style: italic;
+}
+
+#with {
+  color: var(--text_color);
+}
+
+#with a {
+  text-decoration: none;
+}
+

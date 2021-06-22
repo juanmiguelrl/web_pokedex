@@ -1,0 +1,18 @@
+header {
+  max-height: 50px;
+}
+  
+.logo-img {
+  margin-left: 20%;
+  height: 50px;
+  width: 50px;
+}
+
+.logo-name {
+  font-size: 20px;
+}
+
+nav a {
+  padding: 15px 20px;
+  font-size: 15px;
+}

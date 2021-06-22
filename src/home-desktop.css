@@ -1,0 +1,49 @@
+hr {
+  margin: 3em auto;
+}
+
+header {
+  max-height: 70px;
+}
+  
+.logo-img {
+  height: 80px;
+  width: 80px;
+}
+
+.logo-name {
+  font-size: 30px;
+}
+
+nav a {
+  padding: 18px 28px;
+  font-size: 25px;
+}
+
+.filters {
+  margin-bottom: 15em;
+}
+
+.filter-settings {
+  font-size: 1.5em;
+}
+
+.cards {
+  max-height: 85vh;
+  margin-top: -41em;
+}
+
+#search-div {
+  margin-top: 4em;
+}
+
+#filter-collapsible {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1.5vw;
+}
+
+.floating-button img {
+  height: 64px;
+  width: 64px;
+}

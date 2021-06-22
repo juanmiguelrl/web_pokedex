@@ -1,0 +1,298 @@
+/* ***** colors ***** */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+:root {
+
+  --background_color:  #ECECEC;
+  --nav_color: #FF7171;
+  --box_color: #FF7171;
+  --table_color: #FF7171;
+  --text_color: #6E6D6D;
+  --button_color: #FFAA71;
+  --error_color: #FF7171;
+  --bar_color: #FFAA71;
+  --background_color_bar: #6E6D6D;
+  --active_page_color: #FFAA71;
+  --hover_color: #FFAA71;
+  --background_dark_color: #6E6D6D;
+  --header_color: #FF7171;
+  --border_color: #6E6D6D;
+  --nav_text_color: #ECECEC;
+  --background_bar_color: #ECECEC;
+}
+
+/* ***** GENERAL ELEMENTS ***** */
+html {
+  overflow-y: auto;
+  font-family: 'Nunito';
+  background: url('../img/background.png') no-repeat center center fixed;
+ 
+}
+
+body {
+  /* Allow the header to fill all the page */
+  margin: 0;
+  color:var(--text_color);
+}
+
+
+/* ***** HEADER ***** */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  background-color: var(--header_color);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  /* Sets the color of any text inside (logo-name) */
+  color: var(--text_color);
+}
+
+.logo-img {
+  margin-left: 5%;
+  height: 8em;
+  width: 8em;
+}
+
+.logo-name {
+  margin: 0.6em auto;
+  font-size: 3.6em;
+}
+
+nav {
+  margin: auto 12%;
+  white-space: nowrap;
+}
+
+nav a {
+  padding: 1.6em 2em;
+  font-size: 2em;
+  text-decoration: none;
+  color: var(--nav_text_color);
+}
+
+nav a:hover, nav a:focus{
+  color: var(--background_dark_color);
+  background-color: var(--nav_text_color);
+}
+
+nav #active-navoption {
+  background-color: var(--active_page_color);
+  
+  /* Avoid mixing hover and active at the same time */
+  color: var(--nav_text_color);
+}
+
+/* ***** Buttons***** */
+
+button {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  color:var(--nav_text_color);
+  border: 1px solid transparent;
+  background-color: var(--button_color);
+  display: inline-block;
+  border-radius: 5px;
+}
+
+
+button:hover, button:focus {
+  color: var(--background_dark_color);
+  background-color: var(--nav_text_color);
+}
+
+.active{
+  color: var(--background_dark_color);
+  background-color: var(--nav_text_color);
+}
+
+.img_button {
+  padding: 3px 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+#pokeImage {
+  width: 7em;
+  height: auto;
+}
+
+/* ***** MAIN CONTENT ***** */
+main {
+  font-size: 2.45em;
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+  font-size: 3em;
+  font-family: 'Nunito', sans-serif;
+}
+
+h3 {
+  font-size: 2em;
+  font-family: 'Nunito', sans-serif;
+}
+
+.data p {
+  margin: 0;
+  padding: 0;
+}
+
+/* ***** tables***** */
+
+table, th, td  {
+  font-size: 1.2em;
+  scroll-padding-left: 10%;
+  border-collapse: collapse;
+  border: 0.07em solid var(--border_color);
+  background-color: var(--table_color);
+  align-self: start;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/* ***** Main pokemon data***** */
+#pokedata {
+  background-color: var(--box_color);
+  border-radius: 0.3em;
+  padding-bottom: 1em;
+  color: var(--nav_text_color);
+}
+
+.top {
+  display: inline-block;
+  text-align: center;
+  /*float: left;*/
+}
+
+#data {
+  padding-top: 0.5em ;
+  display: inline-block;
+  /*float: right;*/
+  text-align: center;
+  /*color: red;*/
+
+}
+p.clear {
+  clear: both;
+}
+#Typestitle {
+  display: inline-block;
+  /*float: right;*/
+  text-align: center;
+  /*color: red;*/
+}
+#types {
+  display: inline-block;
+}
+
+/******************* TYPES COLOR *******************/
+.pokeType {
+  font-size: 1.5em;
+  padding: 0.1em;
+  color: var(--text_color);
+  border-radius: 0.1em;
+  text-transform: capitalize;
+  margin-left: 0.1em;
+  font-weight: 700;
+}
+.normal {
+  background-color: #a8a878;
+}
+.grass {
+  background-color: #78c850;
+}
+.ground {
+  background-color: #e0c068;
+}
+.fighting {
+  background-color: #c03028;
+}
+.rock {
+  background-color: #b8a038;
+}
+.steel {
+  background-color: #b8b8d0;
+}
+.fire {
+  background-color: #f08030;
+}
+.electric {
+  background-color: #f8d030;
+}
+.flying {
+  background-color: #a890f0;
+}
+.psychic {
+  background-color: #f85888;
+}
+.bug {
+  background-color: #a8b820;
+}
+.dragon {
+  background-color: #7038f8;
+}
+.water {
+  background-color: #6890f0;
+}
+.ice {
+  background-color: #98d8d8;
+}
+.poison {
+  background-color: #a040a0;
+}
+.dark {
+  background-color: #705848;
+}
+.ghost {
+  background-color: #705898;
+}
+.fairy {
+  background-color: #ffaec9;
+}
+
+.poke-info {
+  display: inline-block;
+  margin-right: 0.1em;
+}
+
+
+/* graph bar*/
+
+
+
+* {box-sizing:border-box}
+.stat {
+  text-align: left; /* Right-align text */
+  padding-top: 0.5em; /* Add top padding */
+}
+
+.container {
+  width: 100%; /* Full width */
+  background-color: var(--background_bar_color); /* Grey background */
+}
+.statbar {  background-color: var(--bar_color);}
+
+
+/********* error message *****/
+
+#error {
+  font-size: 1.3em;
+  visibility: hidden;
+  color: var(--error_color);
+  background-color: var(--text_color);
+  border-radius: 0.2em;
+  padding-bottom: 0.1em;
+}

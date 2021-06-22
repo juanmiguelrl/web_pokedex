@@ -1,0 +1,39 @@
+hr {
+    margin: 3em auto;
+  }
+  
+  header {
+    max-height: 70px;
+  }
+    
+  .logo-img {
+    height: 80px;
+    width: 80px;
+  }
+  
+  .logo-name {
+    font-size: 30px;
+  }
+  
+  nav a {
+    padding: 18px 28px;
+    font-size: 25px;
+  }
+
+  
+  main {
+    font-size: 2.2em;
+  }
+  
+  .data p {
+    text-align: left; 
+  }
+  
+  button {
+    padding: 0.7em 2.3em;
+  }
+
+
+  table, th, td  {
+    font-size: 1em;
+  }

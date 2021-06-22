@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="width" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0 " />
+
+    <link rel="icon" type="image/svg" href="../img/pokeball.svg">
+    <link href="results-default.css" rel="stylesheet"/>
+    <link href="results-tablet.css" rel="stylesheet" media="only screen and (min-width: 680px)"/>
+    <link href="results-desktop.css" rel="stylesheet" media="only screen and (min-width: 1080px)"/>
+
+
+    <title>PokePedia</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img class="logo-img" src="../img/pokeball.svg" alt="PokePedia logo"/>
+            <p class="logo-name">PokePedia</p>
+        </div>
+
+        <nav id="navbar">
+            <a id="active-navoption" href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+        </nav>
+    </header>
+
+
+    <main>
+        <div id="error"></div>
+            <div id="webpage">
+                <div id="pokedata">
+            <h2 id = "name">name:</h2>
+            <div class="img_button" >
+                <button type ="button" name = "default" id = "default" alt="button to the sprite to the default one" class="active"> Default </button>
+                <button type ="button" name = "shiny" id = "shiny" alt="button to the sprite to the shiny one"> Shiny </button>
+            </div>
+            <div class="img_button" >
+                <button type ="button" name = "front" id = "front" alt="button to the sprite to the one looking at front" class="active"> Front </button>
+                <button type ="button" name = "back" id = "back" alt="button to the sprite to the one looking back"> Back </button>
+            </div>
+        <div class="top" >
+          <img alt="imagen del pokemon buscado " id="pokeImage" src = "../img/pokeball.svg">
+        </div>
+            <div class="data" id = "data">
+                <p role = "text" id = "ID">ID nº: </p>
+                <p id = "Height">Height:</p>
+                <p id = "Weight">Weight:</p>
+                <p id = "appearence">Indroduced in </p>
+            </div>
+        <p class="clear" id = "description">Description: </p>
+        <h3 id = "Typestitle">Types: </h3>
+        <p class="clear" id="types"></p>
+    </div>
+        <h3 id = "ability_title">Abilities:</h3>
+        <table id="ability_list">
+            <tr>
+              <th>Ability</th>
+              <th>Is hidden</th> 
+            </tr>
+        </table>
+
+        <h3 id = "move_title">Moves:</h3>
+        <table id="move_list">
+            <tr>
+              <th>Movements that can learn:</th>
+             <!-- <th>Leveling up to:</th> -->
+            </tr>
+        </table>
+        <h3 id = "Stats">Stats: </h3>
+        <p id = "atk" class="stat">Attack: </p>
+        <div class="container">
+            <p class="statbar" id = "atk2"> </p>
+        </div>
+        <p id = "def" class="stat">Defense: </p>
+        <div class="container">
+            <p class="statbar" id = "def2"> </p>
+        </div>
+        <p id = "hp" class="stat">Health points: </p>
+        <div class="container">
+            <p class="statbar" id = "hp2"> </p>
+        </div>
+        <p id = "speed" class="stat">Speed: </p>
+        <div class="container">
+            <p class="statbar" id = "speed2"> </p>
+        </div>
+        <p id = "spDef" class="stat">Special Defense:</p>
+        <div class="container">
+            <p class="statbar" id = "spDef2"> </p>
+        </div>
+        <p id = "spAtk" class="stat">Special Attack:</p>
+        <div class="container">
+            <p class="statbar" id = "spAtk2"> </p>
+        </div>
+        <p>Made using pokeapi</p>
+    </div>
+    </main>
+ 
+    <script src="script2.js"></script>
+</body>
+
+
+</html>

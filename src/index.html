@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="MobileOptimized" content="width"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link href="../img/pokeball.svg" rel="icon" type="image/svg"/>
+    <link href="home-default.css" rel="stylesheet"/>
+    <link href="home-tablet.css" rel="stylesheet" media="only screen and (min-width: 680px)"/>
+    <link href="home-desktop.css" rel="stylesheet" media="only screen and (min-width: 1080px)"/>
+
+    <script src="script.js"></script>
+
+    <title>PokePedia</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img class="logo-img" src="../img/pokeball.svg" alt="PokePedia logo"/>
+            <p class="logo-name">PokePedia</p>
+        </div>
+
+        <nav id="navbar">
+            <a id="active-navoption" href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <div id="search-div">
+            <form id="search-form">
+                <input id="search-bar" type="text" list="allpokemons" title="Search bar" placeholder="Pokename (e.g. ditto)"/>
+                <datalist id="allpokemons"></datalist>
+
+                <input id="search-button" type="submit" value="Search" disabled/>
+                <p id="unknown-poke"></p>
+            </form>
+        </div>
+
+        <hr/>
+
+        <div class="secondary">
+        <div class="filters">
+            <button id="filter-collapsible" type="button"> Advanced Settings</button>
+
+            <fieldset class="filter-settings">
+                <legend>Filter options</legend>
+                <div id="range"> 
+                    <label for="min-range">ID Range: </label>
+                    <input id="min-range" type="number" min="1" max="1118" value="1"/>
+                    <label for="max-range">-</label>
+                    <input id="max-range" type="number" min="1" max="1118" value="1118"/>
+                </div>
+
+                <hr class="form-hr"/>
+
+                <label for="type1">Type:</label>
+                <input id="type1" type="text" list="alltypes" value=''/>
+                <datalist id="alltypes"></datalist>
+                <p id="unknown-type1"></p>
+                
+                <hr class="form-hr"/>
+
+                <label for="type2">Type 2:</label>
+                <input id="type2" type="text" list="alltypes" value=''/>
+                <p id="unknown-type2"></p>
+
+                <hr class="form-hr"/>
+
+                <div>
+                    <label for="generation">Generation:</label>
+                    <input id="generation" type="number" min="0" max="8" value="0"/>
+                </div>
+                
+            </fieldset>
+        </div>
+
+        <div class="cards">
+            <div id=reload-grid>
+                <input type="image" src="../img/reload.svg" alt="Reload sprites"/>
+            </div>
+            <div class="cards-grid" aria-live="polite"></div>
+            <div class="lds-dual-ring"></div>
+        </div>
+        </div>
+    </main>
+
+    <div class="floating-button">
+        <a href="#top">
+            <img src="../img/arrow.png" alt="Scroll to the top"/>
+        </a>
+        
+    </div>
+
+    <button id="snackbar" class="" aria-live="polite"></button>
+</body>
+
+</html>

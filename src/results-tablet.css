@@ -1,0 +1,54 @@
+hr {
+  margin: 2em auto;
+}
+
+header {
+  max-height: 50px;
+}
+  
+.logo-img {
+  margin-left: 20%;
+  height: 50px;
+  width: 50px;
+}
+
+.logo-name {
+  font-size: 20px;
+}
+
+nav {
+  margin-right: 5%;
+}
+
+nav a {
+  padding: 15px 20px;
+  font-size: 15px;
+}
+
+
+main {
+  font-size: 2em;
+}
+
+#pokeImage {
+  width: 5em;
+  height: auto;
+}
+
+.data p {
+  font-size: 0.8em;
+  text-align: left; 
+}
+
+button {
+  padding: 0.5em 2em;
+}
+
+.pokeType {
+  font-size: 1.7em;
+}
+
+
+table, th, td  {
+  font-size: 1.1em;
+}

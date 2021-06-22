@@ -1,0 +1,103 @@
+hr {
+  margin: 2em auto;
+}
+
+header {
+  max-height: 50px;
+}
+  
+.logo-img {
+  margin-left: 20%;
+  height: 50px;
+  width: 50px;
+}
+
+.logo-name {
+  font-size: 20px;
+}
+
+nav {
+  margin-right: 5%;
+}
+
+nav a {
+  padding: 15px 20px;
+  font-size: 15px;
+}
+
+#search-div {
+  margin-top: 2em;
+}
+
+#search-bar {
+  font-size: 3vw;
+}
+
+#search-button {
+  font-size: 3vw;
+}
+
+#unknown-poke {
+  font-size: 2vw;
+}
+
+.filters {
+  margin: 0 0;
+  height: 26em;
+  max-width: 40%;
+  margin-right: 0;
+  margin-bottom: 5em;
+}
+
+#filter-collapsible {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+.filter-settings {
+  max-width: 100%;
+  font-size: 1em;
+}
+
+fieldset input {
+  font-size: 2vw;
+}
+
+#unknown-type1, #unknown-type2 {
+  font-size: 1rem;
+}
+
+#min-range, #max-range, #generation {
+  max-width: 4em;
+}
+
+#generation {
+  width: 2em;
+}
+
+.cards {
+  overflow-x: hidden;
+  overflow-y: auto;
+  float: right;
+  margin-top: -31em;
+  width: 55%;
+  max-height: 60vh;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
+  gap: 0.5em;
+}
+
+.pokemon-card {
+  height: 5em;
+  width: 5em;
+  max-width: 64px;
+  max-height: 64px;
+}
+
+.floating-button {
+  display: none;
+}
